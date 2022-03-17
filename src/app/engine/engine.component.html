@@ -1,0 +1,30 @@
+<div class="engine-wrapper">
+
+  <!-- <div class="instruction">
+    <div>
+      <p>Please select an STL model file</p>
+      <p>Use mouse wheel to zoom in/out</p>
+      <p>Use the keyboard arrows to rotate model</p>
+    </div>
+    <div>
+      <p style="font-size: small;">Model file</p>
+      <input type="file" name="file-upload" id="fileUpload" (change)="onModelChange($event)">
+    </div>
+    <div>
+      <p style="font-size: small;">Logo file</p>
+      <input type="file" name="logo-upload" id="logoUpload" (change)="onLogoChange($event)">
+    </div>
+  </div> -->
+
+  <div style="display: inline-flex; margin-left: 20%;">
+    <p>Color:</p>
+    <input type="color" name="color" id="colorPicker" (change)="setColor($event)">
+    <p style="margin: 5px 5px;">Model file:</p>
+    <input type="file" name="file-upload" id="fileUpload" (change)="onModelChange($event)">
+    <p style="margin: 5px 5px;">Logo file:</p>
+    <input type="file" name="file-upload" id="fileUpload" (change)="onLogoChange($event)">
+    <p style="margin: 5px 5px;">Take a screenshot</p>
+    <button (click)="onScreenShotClick()">Screenshot</button>
+  </div>
+  <canvas #rendererCanvas id="renderCanvas"></canvas>
+</div>
